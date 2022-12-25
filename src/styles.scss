@@ -1,87 +1,26 @@
 @use '@angular/material' as mat;
+@import 'colors';
 @include mat.core();
-
-$primary: (
-    50 : #e5f4fd,
-    100 : #bde4fb,
-    200 : #91d2f9,
-    300 : #65bff6,
-    400 : #44b2f4,
-    500 : #23a4f2,
-    600 : #1f9cf0,
-    700 : #1a92ee,
-    800 : #1589ec,
-    900 : #0c78e8,
-    A100 : #ffffff,
-    A200 : #e0eeff,
-    A400 : #add2ff,
-    A700 : #93c3ff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
-
-$secondary: (
-    50 : #eceff1,
-    100 : #cfd8dc,
-    200 : #b0bec5,
-    300 : #90a4ae,
-    400 : #78919c,
-    500 : #607d8b,
-    600 : #587583,
-    700 : #4e6a78,
-    800 : #44606e,
-    900 : #334d5b,
-    A100 : #abe1ff,
-    A200 : #78ceff,
-    A400 : #45bcff,
-    A700 : #2bb3ff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
 
 $TweetManagerSPA-primary: mat.define-palette($primary);
 $TweetManagerSPA-accent: mat.define-palette($secondary, A200, A100, A400);
 
 $TweetManagerSPA-warn: mat.define-palette(mat.$red-palette);
 
-$TweetManagerSPA-theme: mat.define-light-theme((
-  color: (
-    primary: $TweetManagerSPA-primary,
-    accent: $TweetManagerSPA-accent,
-    warn: $TweetManagerSPA-warn,
-  )
-));
+$TweetManagerSPA-theme: mat.define-light-theme((color: (primary: $TweetManagerSPA-primary,
+        accent: $TweetManagerSPA-accent,
+        warn: $TweetManagerSPA-warn,
+      )));
 
 @include mat.all-component-themes($TweetManagerSPA-theme);
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
