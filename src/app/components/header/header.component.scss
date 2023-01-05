@@ -6,12 +6,26 @@ header {
     box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
     display: grid;
     align-items: center;
-    grid-template-columns: 1;
+    grid-template-columns: 5fr 1fr;
     padding: 0 1rem;
 
     a:first-of-type {
         color: map-get($white, 500);
         font-weight: 600;
         text-decoration: none;
+    }
+
+    div {
+        color: map-get($white, 500);
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 100px;
+            margin-left: 10px;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
     }
 }

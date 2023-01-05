@@ -2,4 +2,8 @@
     <nav>
         <a href="/">Tweet Manager <fa-icon [icon]="logo"></fa-icon></a>
     </nav>
+    <div *ngIf="user">
+        <p>{{ user.name }}</p>
+        <img [src]="user.profileImageUrl" alt="User profile photo" (click)="logout()">
+    </div>
 </header>

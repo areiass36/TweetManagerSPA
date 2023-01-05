@@ -12,12 +12,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BaseHttpInterceptor } from './interceptors/base-http.interceptor';
 import { AuthService } from './services/auth.service';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
