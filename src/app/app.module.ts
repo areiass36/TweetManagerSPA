@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BaseHttpInterceptor } from './interceptors/base-http.interceptor';
 import { AuthService } from './services/auth.service';
 import { UserComponent } from './components/user/user.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UserComponent } from './components/user/user.component';
       useClass: BaseHttpInterceptor,
       multi: true
     },
-    AuthService
+    AuthService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
